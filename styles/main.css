@@ -1,0 +1,442 @@
+                                                        :root {
+                                                           /*primary colors*/
+                                                           --DarkBlue: hsl(233, 26%, 24%);
+                                                           --LimeGreen: hsl(136, 65%, 51%);
+                                                           --BrightCyan: hsl(192, 70%, 51%);
+                                                           /*neutral color*/
+                                                           --GrayishBlue: hsl(233, 8%, 62%);
+                                                           --LightGrayishBlue: hsl(220, 16%, 96%);
+                                                           --VeryLightGray: hsl(0, 0%, 98%);
+                                                           --White: hsl(0, 0%, 100%);
+                                                           --FontSize: 18px;
+                                                           --FontFamily: [Public Sans](https: //fonts.google.com/specimen/Public+Sans);
+                                                           --FontWeightSmall: 300;
+                                                           --FontWeightMiddle: 400;
+                                                           --FontWeightBig: 700;
+                                                       }
+                                                       
+                                                       * {
+                                                           padding: 0;
+                                                           margin: 0;
+                                                       }
+                                                       
+                                                       body {
+                                                           font-family: var(--FontFamily);
+                                                           overflow-x: hidden;
+                                                       }
+                                                       
+                                                       h1 {
+                                                           font-weight: var(--FontWeightBig);
+                                                       }
+                                                       
+                                                       h2 {
+                                                           font-weight: var(--FontWeightMiddle);
+                                                       }
+                                                       
+                                                       h5 {
+                                                           font-weight: var(--FontWeightSmall);
+                                                       }
+                                                       
+                                                       .btn:focus, button:focus {
+                                                           box-shadow: none !important;
+                                                           outline: none !important;
+                                                       }
+                                                       
+                                                       .btn, button {
+                                                           box-shadow: none !important;
+                                                           border: none;
+                                                       }
+                                                       
+                                                       .btn {
+                                                           background: linear-gradient(to left, var(--LimeGreen), var(--BrightCyan));
+                                                           border: none;
+                                                           color: var(--White);
+                                                       }
+                                                       
+                                                       .btn:hover {
+                                                           color: var(--White);
+                                                           opacity: 0.8;
+                                                       }
+                                                       
+                                                       .navbar-toggler {
+                                                           border: none !important;
+                                                       }
+                                                       
+                                                       .btn-info:focus {
+                                                           box-shadow: none;
+                                                       }
+                                                       
+                                                       .navbar-nav {
+                                                           margin-left: auto;
+                                                       }
+                                                       
+                                                       .navbar-collapse {
+                                                           justify-content: space-between;
+                                                       }
+                                                       
+                                                       .nav-container {
+                                                           position: relative;
+                                                           z-index: 100;
+                                                       }
+                                                       
+                                                       .nav-container, .navbar {
+                                                           background: var(--White) !important;
+                                                       }
+                                                       
+                                                       .navbar-nav li.nav-item {
+                                                           position: relative;
+                                                       }
+                                                       
+                                                       .navbar-nav li.nav-item a.active:after {
+                                                           content: "";
+                                                           width: 50px;
+                                                           height: 4px;
+                                                           background: linear-gradient(to left, var(--LimeGreen), var(--BrightCyan));
+                                                           position: absolute;
+                                                           top: 50px;
+                                                           left: 50%;
+                                                           transform: translateX(-50%);
+                                                           bottom: 0;
+                                                           right: 0;
+                                                           display: block;
+                                                       }
+                                                       
+                                                       .navbar-nav li.nav-item:hover:after {
+                                                           display: block;
+                                                       }
+                                                       
+                                                       .navbar-nav li.nav-item:after {
+                                                           content: "";
+                                                           width: 50px;
+                                                           height: 4px;
+                                                           background: linear-gradient(to left, var(--LimeGreen), var(--BrightCyan));
+                                                           position: absolute;
+                                                           top: 50px;
+                                                           left: 50%;
+                                                           transform: translateX(-50%);
+                                                           bottom: 0;
+                                                           right: 0;
+                                                           display: none;
+                                                       }
+                                                       
+                                                       .hero-container, .articles-container {
+                                                           background: var(--VeryLightGray) !important;
+                                                       }
+                                                       
+                                                       .hero-container .row {
+                                                           justify-content: space-between;
+                                                           width: 100vw;
+                                                           min-height: 100vh;
+                                                       }
+                                                       
+                                                       .hero-text {
+                                                           display: grid;
+                                                           place-content: center;
+                                                           padding-left: 5rem !important;
+                                                       }
+                                                       
+                                                       .hero-text>* {
+                                                           padding: 1rem 5rem !important;
+                                                       }
+                                                       
+                                                       .hero-img {
+                                                           background-image: url("../images/bg-intro-desktop.svg");
+                                                           background-size: cover;
+                                                           background-repeat: no-repeat;
+                                                           background-position: center left;
+                                                           position: relative;
+                                                       }
+                                                       
+                                                       .hero-img img {
+                                                           position: absolute;
+                                                           object-fit: contain;
+                                                           top: -15%;
+                                                           right: -15%;
+                                                       }
+                                                       
+                                                       .features-container {
+                                                           background: var(--LightGrayishBlue);
+                                                           padding: 4rem 5rem !important;
+                                                       }
+                                                       
+                                                       .features-container .row {
+                                                           padding: 1rem 5rem !important;
+                                                       }
+                                                       
+                                                       .articles-container {
+                                                           padding: 2rem 5rem !important;
+                                                       }
+                                                       
+                                                       .articles-container h2,
+                                                       .articles-container .row {
+                                                           padding: 2rem 5rem !important;
+                                                       }
+                                                       
+                                                       .articles-container .card-img-top {
+                                                           object-fit: cover;
+                                                       }
+                                                       
+                                                       .articles-container .card-body {
+                                                           min-height: 250px;
+                                                       }
+                                                       
+                                                       .articles-container .card-body h5 a {
+                                                           text-decoration: none;
+                                                           color: var(--DarkBlue);
+                                                           transition: all 0.25s;
+                                                       }
+                                                       
+                                                       .articles-container .card-body h5 a:hover {
+                                                           color: var(--LimeGreen);
+                                                       }
+                                                       
+                                                       .small {
+                                                           font-size: .75em !important;
+                                                           padding-top: 1rem !important;
+                                                       }
+                                                       
+                                                       .text-muted {
+                                                           color: var(--GrayishBlue) !important;
+                                                       }
+                                                       
+                                                       .footer-container {
+                                                           background: var(--DarkBlue);
+                                                           padding: 1rem 5rem !important;
+                                                       }
+                                                       
+                                                       .footer-container .row {
+                                                           padding: 1rem 1rem 1rem 5rem !important;
+                                                       }
+                                                       
+                                                       .footer-container .socials-container {
+                                                           padding-top: 2.8rem;
+                                                       }
+                                                       
+                                                       .footer-container ul li {
+                                                           list-style: none;
+                                                       }
+                                                       
+                                                       .footer-container .nav-link {
+                                                           color: white !important;
+                                                           transition: all 0.25s;
+                                                       }
+                                                       
+                                                       .footer-container .nav-link:hover,
+                                                       .footer-container .social-link {
+                                                           color: var(--LimeGreen) !important;
+                                                       }
+                                                       
+                                                       .footer-container a {
+                                                           transition: all 0.25s;
+                                                       }
+                                                       
+                                                       .footer-container a:hover svg path {
+                                                           fill: var(--LimeGreen) !important;
+                                                       }
+                                                       
+                                                       .footer-container .btn-footer-container {
+                                                           text-align: end;
+                                                       }
+                                                       
+                                                       .footer-container .btn-footer-container p {
+                                                           color: var(--GrayishBlue);
+                                                           padding-top: 2rem;
+                                                       }
+                                                       
+                                                       @media(max-width:991px) {
+                                                           .navbar-nav li.nav-item a.active:after {
+                                                               display: none;
+                                                           }
+                                                           .navbar-nav li.nav-item:hover:after {
+                                                               display: none;
+                                                           }
+                                                           .navbar-collapse {
+                                                               position: absolute;
+                                                               background: white;
+                                                               top: 50;
+                                                               left: 50%;
+                                                               margin-top: 1.5rem;
+                                                               border-radius: 5px;
+                                                               transform: translateX(-50%);
+                                                               width: 96%;
+                                                               top: 100%;
+                                                               padding: 1rem;
+                                                           }
+                                                           .navbar-collapse .btn {
+                                                               display: none;
+                                                           }
+                                                           .navbar-nav {
+                                                               text-align: center;
+                                                           }
+                                                           .hero-img {
+                                                               min-height: 550px !important;
+                                                           }
+                                                           .menu-container {
+                                                               flex-direction: column !important;
+                                                           }
+                                                           .features-container {
+                                                               padding: 1rem !important;
+                                                           }
+                                                           .features-container .row {
+                                                               text-align: center;
+                                                               padding: 1rem 2rem !important;
+                                                           }
+                                                           .features-container .row:last-of-type>div {
+                                                               margin-bottom: 2rem;
+                                                           }
+                                                           .articles-container {
+                                                               padding: 1rem !important;
+                                                           }
+                                                           .articles-container h2,
+                                                           .articles-container .row {
+                                                               padding: 2rem 2rem !important;
+                                                           }
+                                                           .articles-container h2 {
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container {
+                                                               padding: 0 !important;
+                                                           }
+                                                           .footer-container .logo-footer {
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container .row div:first-child {
+                                                               display: grid !important;
+                                                               place-content: center;
+                                                           }
+                                                           .footer-container .row ul {
+                                                               padding: 0 !important;
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container .row ul:first-of-type {
+                                                               margin-bottom: 0;
+                                                           }
+                                                           .footer-container .btn-footer-container {
+                                                               text-align: center !important;
+                                                           }
+                                                       }
+                                                       
+                                                       @media(max-width:767px) {
+                                                           .navbar-nav li.nav-item a.active:after {
+                                                               display: none;
+                                                           }
+                                                           .navbar-nav li.nav-item:hover:after {
+                                                               display: none;
+                                                           }
+                                                           .navbar-collapse {
+                                                               position: absolute;
+                                                               background: white;
+                                                               top: 50;
+                                                               left: 50%;
+                                                               margin-top: 1.5rem;
+                                                               border-radius: 5px;
+                                                               transform: translateX(-50%);
+                                                               width: 96%;
+                                                               top: 100%;
+                                                               padding: 1rem;
+                                                           }
+                                                           .navbar-collapse .btn {
+                                                               display: none;
+                                                           }
+                                                           .navbar-nav {
+                                                               text-align: center;
+                                                           }
+                                                           .hero-container .row {
+                                                               flex-direction: column-reverse !important;
+                                                           }
+                                                           .hero-text {
+                                                               padding: 1rem !important;
+                                                               text-align: center;
+                                                           }
+                                                           .hero-text>* {
+                                                               padding: 1rem 2rem !important;
+                                                           }
+                                                           .hero-img {
+                                                               min-height: 550px !important;
+                                                           }
+                                                           .menu-container {
+                                                               flex-direction: column !important;
+                                                           }
+                                                           .features-container {
+                                                               padding: 1rem !important;
+                                                           }
+                                                           .features-container .row {
+                                                               text-align: center;
+                                                               padding: 1rem 2rem !important;
+                                                           }
+                                                           .features-container .row:last-of-type>div {
+                                                               margin-bottom: 2rem;
+                                                           }
+                                                           .articles-container {
+                                                               padding: 1rem !important;
+                                                           }
+                                                           .articles-container h2,
+                                                           .articles-container .row {
+                                                               padding: 2rem 2rem !important;
+                                                           }
+                                                           .articles-container h2 {
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container {
+                                                               padding: 0 !important;
+                                                           }
+                                                           .footer-container .row {
+                                                               display: grid;
+                                                               place-content: center;
+                                                               padding-left: 1rem !important;
+                                                           }
+                                                           .footer-container .logo-footer {
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container .row div:first-child {
+                                                               display: grid !important;
+                                                               place-content: center;
+                                                           }
+                                                           .footer-container .row .socials-container {
+                                                               padding-top: 0;
+                                                               margin: 0 !important;
+                                                           }
+                                                           .footer-container .row ul {
+                                                               padding: 0 !important;
+                                                               text-align: center;
+                                                           }
+                                                           .footer-container .btn-footer-container {
+                                                               text-align: center !important;
+                                                           }
+                                                       }
+                                                       
+                                                       @media(max-width:500px) {
+                                                           .nav-container {
+                                                               padding: 0.5rem !important;
+                                                           }
+                                                           .btn {
+                                                               padding: 0.5rem 1.5rem !important;
+                                                           }
+                                                           .hero-img {
+                                                               min-height: 500px !important;
+                                                           }
+                                                           .hero-img img {
+                                                               top: -35%;
+                                                           }
+                                                           .hero-container h5 {
+                                                               padding: 1rem 0.5rem !important;
+                                                           }
+                                                           .features-container .row {
+                                                               padding: 1rem 0 !important;
+                                                           }
+                                                           .features-container .row h2 {
+                                                               padding: 0 5rem;
+                                                           }
+                                                           .articles-container .row {
+                                                               padding: 2rem 0 !important;
+                                                           }
+                                                           .footer-container .row ul:first-of-type {
+                                                               margin-bottom: 0;
+                                                           }
+                                                       }
+                                                       
+                                                       @media(max-width:375px) {
+                                                           .hero-img {
+                                                               min-height: 350px !important;
+                                                           }
+                                                       }
